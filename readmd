@@ -1,0 +1,8 @@
+The procedure is to run the following commands
+
+rm -rf obj_dir
+
+verilator -O1 -Wall --cc tb_tsetlin_accelerator.v --exe sim_main.cpp --timing -Wno-EOFNEWLINE -Wno-BLKSEQ  -Wno-WIDTHEXPAND
+
+make -C obj_dir -f Vtb_tsetlin_accelerator.mk
+./obj_dir/Vtb_tsetlin_accelerator
